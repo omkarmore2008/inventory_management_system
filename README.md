@@ -39,6 +39,9 @@ First, clone the repository to your local machine:
 Access Swagger API documentation once the server is running, open your browser and visit:
 `http://127.0.0.1:8000/api/docs`
 
+Access documentation once the server is running, open your browser and visit:
+`http://127.0.0.1:8000/api/redoc`
+
 ### 4. Bash to djago contianer and apply migrations
 
 
