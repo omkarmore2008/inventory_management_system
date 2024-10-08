@@ -7,3 +7,9 @@ class InventorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Inventory
         fields = "__all__"
+
+
+class InventoryUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Inventory
+        fields = ["name", "description"]

@@ -7,6 +7,7 @@ from rest_framework.viewsets import ModelViewSet
 from inventory_management_system.inventory.models import Inventory
 
 from .serializers import InventorySerializer
+from .serializers import InventoryUpdateSerializer
 
 
 class InventorryViewSet(ModelViewSet):
@@ -14,6 +15,11 @@ class InventorryViewSet(ModelViewSet):
     queryset = Inventory.objects.all()
     lookup_field = "pk"
     permission_classes = [IsAuthenticated]
+
+    def get_serializer_class(self):
+        if self.action == "update":
+            return InventoryUpdateSerializer
+        return super().get_serializer_class()
 
     def list(self, request, *args, **kwargs):
         cache_key = "inventory_data"  # Define cache key
