@@ -1,6 +1,4 @@
-# Google-Meet-Django
-
-Basic google session creation and meeting link generate
+# Inventory Management System
 
 
 ## Settings
